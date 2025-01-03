@@ -1,45 +1,18 @@
 package q9498;
 
-import java.util.Scanner;
+import java.io.*;
 
-public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int score = sc.nextInt();
-		sc.close();
-
-		System.out.println(score);
-
-		// case 2.
-		switch (score / 10) {
-		case 10:
-		case 9:
-			System.out.println("A");
-//			break;
-		case 8:
-			System.out.println("B");
-//			break;
-		case 7:
-			System.out.println("C");
-//			break;
-		case 6:
-			System.out.println("D");
-//			break;
-		default:
-			System.out.println("F");
-		}
-
-		// case 1.
-		if (90 <= score && score <= 100) {
-			System.out.println("A");
-		} else if (80 <= score && score <= 89) {
-			System.out.println("B");
-		} else if (70 <= score && score <= 89) {
-			System.out.println("C");
-		} else if (60 <= score && score <= 69) {
-			System.out.println("D");
-		} else {
-			System.out.println("F");
-		}
+class Main {
+	public static void main(String args[]) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int input = Integer.parseInt(br.readLine());
+		bw.write(String.valueOf(input));
+		if (input < 0) {
+//			bw.write(String.valueOf(input) + "\nminus");
+//			bw.write(String.valueOf(input));
+			bw.write("\nminus");
+		} 
+		bw.flush();
 	}
 }
